@@ -1,0 +1,293 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png" />
+
+    <title>Frontend Mentor | Multi-step form</title>
+
+    <link rel="stylesheet" href="./assets/css/style.min.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <!-- Sidebar -->
+        <div class="sidebar">
+          <ul id="menu" class="sidebar__menu">
+            <!-- Item 1 -->
+
+            <li class="items sidebar__menu__items">
+              <div class="circle_number active">1</div>
+              <div class="sidebar__menu__items__name">
+                <span>STEP 1</span> <br />
+                YOUR INFO
+              </div>
+            </li>
+
+            <!-- Item 2 -->
+
+            <li class="items sidebar__menu__items">
+              <div class="circle_number">2</div>
+              <div class="sidebar__menu__items__name">
+                <span>STEP 2</span> <br />
+                SELECT PLAN
+              </div>
+            </li>
+
+            <!-- Item 3 -->
+
+            <li class="items sidebar__menu__items">
+              <div class="circle_number">3</div>
+              <div class="sidebar__menu__items__name">
+                <span>STEP 3</span> <br />
+                ADD-ONS
+              </div>
+            </li>
+
+            <!-- Item 4 -->
+
+            <li class="items sidebar__menu__items">
+              <div class="circle_number">4</div>
+              <div class="sidebar__menu__items__name">
+                <span>STEP 4</span> <br />
+                SUMMARY
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!-- End of Sidebar -->
+
+        <div class="content">
+          <!-- Step 1 Content -->
+          <div class="steps step-one" data-steps-value="show">
+            <div class="steps__title">
+              <h1>Personal info</h1>
+              <p>Please provide your name, email address, and phone number.</p>
+            </div>
+
+            <div class="steps__body">
+              <form action="">
+                <div class="form-control">
+                  <label for="name">Name</label>
+                  <input type="text" id="name" placeholder="e.g Jun Jun" />
+                </div>
+                <div class="form-control">
+                  <label for="email">Email Address</label>
+                  <input
+                    type="email"
+                    id="email"
+                    placeholder="e.g your@email.com" />
+                </div>
+                <div class="form-control error">
+                  <label for="phone">Phone</label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    placeholder="e.g +1 234-567 890" />
+                </div>
+              </form>
+            </div>
+
+            <div class="steps__footer d-flex-end">
+              <button class="nextBtn">Next Step</button>
+            </div>
+          </div>
+          <!-- End of Step 1 -->
+
+          <!-- Step 2 Content -->
+          <div class="steps step-two" data-steps-value="hide">
+            <div class="steps__title">
+              <h1>Select your plan</h1>
+              <p>You have the option of monthly or yearly billing</p>
+            </div>
+
+            <div class="steps__body">
+              <form action="">
+                <div class="billing">
+                  <div class="box">
+                    <div class="box__icon">
+                      <img src="./assets/images/icon-arcade.svg" alt="" />
+                    </div>
+                    <div class="box__desc">
+                      <label for="arcade">
+                        <h4>Arcade</h4>
+                        <p>$90/hr</p>
+                        <h5>2 month free</h5>
+                      </label>
+                      <input type="radio" id="arcade" name="billing" hidden />
+                    </div>
+                  </div>
+                  <div class="box">
+                    <div class="box__icon">
+                      <img src="./assets/images/icon-advanced.svg" alt="" />
+                    </div>
+                    <div class="box__desc">
+                      <label for="arcade">
+                        <h4>Advanced</h4>
+                        <p>$120/hr</p>
+                        <h5>2 month free</h5>
+                      </label>
+                      <input type="radio" id="arcade" name="billing" hidden />
+                    </div>
+                  </div>
+                  <div class="box">
+                    <div class="box__icon">
+                      <img src="./assets/images/icon-pro.svg" alt="" />
+                    </div>
+                    <div class="box__desc">
+                      <label for="arcade">
+                        <h4>Pro</h4>
+                        <p>$150/hr</p>
+                        <h5>2 month free</h5>
+                      </label>
+                      <input type="radio" id="arcade" name="billing" hidden />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="monthly">
+                  <h4>Monthly</h4>
+                  <input
+                    type="checkbox"
+                    class="checkbox"
+                    id="checkbox"
+                    hidden />
+                  <label for="checkbox" class="label">
+                    <div class="ball"></div>
+                  </label>
+                  <h4>Yearly</h4>
+                </div>
+              </form>
+            </div>
+
+            <div class="steps__footer">
+              <button class="no-bg backBtn">Go back</button>
+              <button class="nextBtn">Next Step</button>
+            </div>
+          </div>
+          <!-- End of Step 1 -->
+
+          <!-- Step 3 Content -->
+          <div class="steps step-three" data-steps-value="hide">
+            <div class="steps__title">
+              <h1>Pick add-ons</h1>
+              <p>Add-ons hel enhance your gaming experience</p>
+            </div>
+
+            <div class="steps__body">
+              <form action="">
+                <div class="adds-on">
+                  <div class="adds-on__card">
+                    <input type="checkbox" name="" id="online-service" />
+                    <label for="online-service">
+                      <h4>Online Service</h4>
+                      <p>Access multiplayer games</p>
+                    </label>
+                    <div class="hours">+$10/yr</div>
+                  </div>
+                  <div class="adds-on__card">
+                    <input type="checkbox" name="" id="larger-storage" />
+                    <label for="larger-storage">
+                      <h4>Larger storage</h4>
+                      <p>Extra 1TB of cloud save</p>
+                    </label>
+                    <div class="hours">+$20/yr</div>
+                  </div>
+                  <div class="adds-on__card">
+                    <input type="checkbox" name="" id="customizable-profile" />
+                    <label for="customizable-profile">
+                      <h4>Customizable Profile</h4>
+                      <p>Custom theme on your profile</p>
+                    </label>
+                    <div class="hours">+$20/yr</div>
+                  </div>
+                </div>
+              </form>
+            </div>
+
+            <div class="steps__footer">
+              <button class="no-bg backBtn">Go back</button>
+              <button class="nextBtn">Next Step</button>
+            </div>
+          </div>
+          <!-- End of Step 3 -->
+
+          <!-- Step 4 Content -->
+          <div class="steps step-four" data-steps-value="hide">
+            <div class="steps__title">
+              <h1>Finishing up</h1>
+              <p>Double check everthing looks OK before confirming</p>
+            </div>
+
+            <div class="steps__body">
+              <form action="">
+                <div class="double-check">
+                  <div class="double-check__header">
+                    <div class="double-check__header__desc">
+                      <h3>Arcade (Monthly)</h3>
+                      <p style="text-decoration: underline">Change</p>
+                    </div>
+                    <div class="hour">$90/yr</div>
+                  </div>
+                  <hr />
+                  <div class="double-check__body">
+                    <div class="double-check__body__items">
+                      <p>Online service</p>
+                      <span>+$10yr</span>
+                    </div>
+                    <div class="double-check__body__items">
+                      <p>Larger storage</p>
+                      <span>+$20yr</span>
+                    </div>
+                  </div>
+                  <div class="double-check__footer">
+                    <p>Total (per year)</p>
+                    <span>$120/yr</span>
+                  </div>
+                </div>
+              </form>
+            </div>
+
+            <div class="steps__footer">
+              <button class="no-bg backBtn">Go back</button>
+              <button class="nextBtn">Confirm</button>
+            </div>
+          </div>
+          <!-- End of Step 4 -->
+
+          <div class="steps greet" data-steps-value="hide">
+            <img src="./assets/images/icon-thank-you.svg" width="100" alt="" />
+            <h1>Thank you!</h1>
+            <p>
+              Thanks for confirming your subscription! We hope you have fun
+              using our platform. If you ever need support. please feel free to
+              email us at support@loremgaming.com
+            </p>
+            <div class="steps__footer">
+              <button class="no-bg backBtn">Go back</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Morax</a>.
+    </div>
+
+    <!-- JS -->
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>
